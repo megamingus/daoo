@@ -8,4 +8,18 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public class Order {
+    final Attribute attribute;
+    final OrderEnum order;
+    private Order(Attribute attribute,OrderEnum o){
+        this.attribute=attribute;
+        order=o;
+    }
+
+    static Order desc(Attribute attribute){
+        return new Order(attribute,OrderEnum.DESC);
+    }
+
+    static Order asc(Attribute attribute){
+        return new Order(attribute,OrderEnum.ASC);
+    }
 }
