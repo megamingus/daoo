@@ -8,4 +8,10 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public interface Visitor {
+    void visit(Query query);
+    void visit(Table table);
+    void visit(Attribute attribute);
+    void visit(Restriction restriction);
+    void visit(Order order);
+    void visit(Limit limit);
 }

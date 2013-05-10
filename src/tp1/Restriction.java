@@ -7,7 +7,7 @@ package tp1;
  * Time: 01:00
  * To change this template use File | Settings | File Templates.
  */
-public class Restriction {
+public class Restriction implements Visitable{
     final OperationEnum operation;
     final String attribute;     // podria ser un Attribute pero lo dejamos un string para simplificar
     final String value;
@@ -44,4 +44,8 @@ public class Restriction {
         return new Restriction(attr, OperationEnum.LIKE,o);
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

@@ -9,15 +9,15 @@ import java.util.List;
  * Time: 01:00
  * To change this template use File | Settings | File Templates.
  */
-public class Query extends Main implements Visitable {
+public class Query implements Visitable {
 
     final Table table;
     final List<Attribute> attributes;
     final List<Restriction> restrictions;
     final List<Order> orders;
-    final int limit;
+    final Limit limit;
 
-    public Query(Table table,List<Attribute> attributes,List<Restriction> restrictions,List<Order> orders,int limit){
+    public Query(Table table,List<Attribute> attributes,List<Restriction> restrictions,List<Order> orders,Limit limit){
         this.table=table;
         this.attributes=attributes;
         this.restrictions=restrictions;
@@ -25,4 +25,20 @@ public class Query extends Main implements Visitable {
         this.limit=limit;
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+        for(Attribute a:attributes){
+            a.accept(visitor);
+        }
+        table.accept(visitor);
+        for(Restriction r:restrictions){
+            r.accept(visitor);
+        }
+        for(Order o:orders){
+            o.accept(visitor);
+        }
+        limit.accept(visitor);
+
+    }
 }

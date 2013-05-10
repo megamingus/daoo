@@ -17,10 +17,13 @@ public class QueryBuilder {
     private List<Attribute> attributes;
     private List<Restriction> restrictions;
     private List<Order> orders;
-    private int limit;
+    private Limit limit;
 
     public QueryBuilder from(String table){
         this.table=new Table(table);
+        attributes=new ArrayList<Attribute>();
+        restrictions=new ArrayList<Restriction>();
+        orders=new ArrayList<Order>();
         return this;
     }
 
@@ -46,7 +49,7 @@ public class QueryBuilder {
     }
 
     public QueryBuilder limit(int limit){
-        this.limit=limit;
+        this.limit=new Limit(limit);
         return this;
     }
 

@@ -7,7 +7,7 @@ package tp1;
  * Time: 01:01
  * To change this template use File | Settings | File Templates.
  */
-public class Order {
+public class Order implements Visitable{
     final Attribute attribute;
     final OrderEnum order;
     private Order(Attribute attribute,OrderEnum o){
@@ -21,5 +21,10 @@ public class Order {
 
     static Order asc(Attribute attribute){
         return new Order(attribute,OrderEnum.ASC);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

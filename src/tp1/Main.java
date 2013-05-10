@@ -17,5 +17,8 @@ public class Main {
                 .orderBy(name.desc())
                 .limit(1)
                 .build();
+        SQLVisitor visitor=new SQLVisitor();
+        q.accept(visitor);
+        System.out.println(visitor.result);
     }
 }

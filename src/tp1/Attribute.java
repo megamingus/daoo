@@ -7,16 +7,12 @@ package tp1;
  * Time: 01:00
  * To change this template use File | Settings | File Templates.
  */
-public class Attribute {
+public class Attribute implements Visitable{
 
-    String name;
+    final String name;
 
     public Attribute(String name){
         this.name=name;
-    }
-
-    public String getName(){
-        return name;
     }
 
     public Restriction eq(String i){  // podria hacer que simplemente sea un Object lo que le pase... pero mejor evitar que pase objetos complicados...
@@ -76,4 +72,8 @@ public class Attribute {
         return Order.asc(this);
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }
