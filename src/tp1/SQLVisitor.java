@@ -46,6 +46,8 @@ public class SQLVisitor implements Visitor {
             case GT: op=">"; break;
             case LE: op="<="; break;
             case LT: op="<"; break;
+            case AND: op="AND";break;
+            case OR: op="OR";break;
             case BETWEEN: op="BETWEEN"; break;
             case LIKE: op="LIKE"; break;
             default: op="IN"; break;
@@ -63,6 +65,8 @@ public class SQLVisitor implements Visitor {
             case GT: op=">"; break;
             case LE: op="<="; break;
             case LT: op="<"; break;
+            case AND: op="AND";break;
+            case OR: op="OR";break;
             case BETWEEN: op="BETWEEN"; break;
             case LIKE: op="LIKE"; break;
             default: op="IN"; break;

@@ -18,11 +18,11 @@ public class BinaryExpression extends Expression{
         this.right = right;
     }
 
-    static BinaryExpression and(Expression<?> left,Expression<?> right){
-        return new BinaryExpression(left,OperationEnum.AND,right);
+    public BinaryExpression and(Expression<?> right){
+        return new BinaryExpression(this,OperationEnum.AND,right);
     }
-    static BinaryExpression or(Expression<?> left,Expression<?> right){
-        return new BinaryExpression(left,OperationEnum.OR,right);
+    public BinaryExpression or(Expression<?> right){
+        return new BinaryExpression(this,OperationEnum.OR,right);
     }
     static BinaryExpression eq(Expression<?> left,Expression<?> right){
         return new BinaryExpression(left,OperationEnum.EQ,right);
@@ -49,8 +49,8 @@ public class BinaryExpression extends Expression{
     static BinaryExpression like(Expression<?> left,Expression<?> right){
         return new BinaryExpression(left,OperationEnum.LIKE,right);
     }
-    static UnaryExpression not(Expression<?> expression){
-        return UnaryExpression.not(expression);
+    public UnaryExpression not(){
+        return UnaryExpression.not(this);
     }
 
 

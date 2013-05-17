@@ -21,12 +21,12 @@ public class UnaryExpression extends Expression {
         return new UnaryExpression(OperationEnum.NOT,expression);
     }
 
-    static BinaryExpression and(Expression<?> left,Expression<?> right){
-        return BinaryExpression.and(left,right);
+ /*   public BinaryExpression and(Expression<?> right){
+        return BinaryExpression.and(this,OperationEnum.AND,right);
     }
-    static BinaryExpression or(Expression<?> left,Expression<?> right){
-        return BinaryExpression.or(left,right);
-    }
+    public BinaryExpression or(Expression<?> right){
+        return BinaryExpression.or(this,right);
+    }*/
     static BinaryExpression eq(Expression<?> left,Expression<?> right){
         return BinaryExpression.eq(left,right);
     }
