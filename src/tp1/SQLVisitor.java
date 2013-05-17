@@ -99,4 +99,14 @@ public class SQLVisitor implements Visitor {
     public void visit(Symbol<?> tSymbol) {
         result+= tSymbol.symbol.toString()+ " ";
     }
+
+    @Override
+    public void visit(BlockSeparator blockSeparator) {
+        String op;
+        switch (blockSeparator.separator){
+            case BEGIN: op="("; break;
+            default: op=")"; break;
+        }
+        result+= op;
+    }
 }

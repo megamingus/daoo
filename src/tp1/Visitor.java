@@ -20,4 +20,5 @@ public interface Visitor {
     void visit(Limit limit);
     void visit(Symbol<?> tSymbol);
 
+    void visit(BlockSeparator blockSeparator);
 }

@@ -56,8 +56,10 @@ public class BinaryExpression extends Expression{
 
     @Override
     public void accept(Visitor visitor) {
+        BlockSeparator.begin().accept(visitor);
         left.accept(visitor);
         visitor.visit(this);
         right.accept(visitor);
+        BlockSeparator.end().accept(visitor);
     }
 }
