@@ -8,6 +8,7 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public class Main {
+
     public static void main(String[] args) {
         Attribute name=new Attribute("name");
         Query q=new QueryBuilder()
