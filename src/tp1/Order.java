@@ -25,6 +25,7 @@ public class Order implements Visitable{
 
     @Override
     public void accept(Visitor visitor) {
+        attribute.accept(visitor);
         visitor.visit(this);
     }
 }

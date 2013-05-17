@@ -7,5 +7,7 @@ package tp1;
  * Time: 09:16
  * To change this template use File | Settings | File Templates.
  */
-public class Expression {
+public abstract class Expression<T> implements Visitable{
+    public abstract void accept(Visitor visitor);
 }
+

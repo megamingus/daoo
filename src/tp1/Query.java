@@ -13,11 +13,13 @@ public class Query implements Visitable {
 
     final Table table;
     final List<Attribute> attributes;
-    final List<Restriction> restrictions;
+    final Where where= new Where();
+    final List<Expression<?>> restrictions;
+    final OrderBy orderBy=new OrderBy();
     final List<Order> orders;
     final Limit limit;
 
-    public Query(Table table,List<Attribute> attributes,List<Restriction> restrictions,List<Order> orders,Limit limit){
+    public Query(Table table,List<Attribute> attributes,List<Expression<?>> restrictions,List<Order> orders,Limit limit){
         this.table=table;
         this.attributes=attributes;
         this.restrictions=restrictions;
@@ -32,11 +34,17 @@ public class Query implements Visitable {
             a.accept(visitor);
         }
         table.accept(visitor);
-        for(Restriction r:restrictions){
-            r.accept(visitor);
+        if(!restrictions.isEmpty()){
+            visitor.visit(where);
+            for(Expression r:restrictions){
+                r.accept(visitor);
+            }
         }
-        for(Order o:orders){
-            o.accept(visitor);
+        if (!orders.isEmpty()){
+            visitor.visit(orderBy);
+            for(Order o:orders){
+                o.accept(visitor);
+            }
         }
         limit.accept(visitor);
 

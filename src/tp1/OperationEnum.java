@@ -8,6 +8,6 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public enum OperationEnum {
-    EQ,NE,LT,GT,LE,GE,BETWEEN,LIKE
+    EQ,NE,LT,GT,LE,GE,BETWEEN,LIKE,NOT,AND,OR
 
 }

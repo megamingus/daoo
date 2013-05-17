@@ -18,13 +18,39 @@ public class SQLVisitor implements Visitor {
 
     @Override
     public void visit(Attribute attribute) {
-        result+=attribute.name+", ";
+
     }
 
     @Override
     public void visit(Table table) {
-        result=result.substring(0,result.length()-2);
-        result+=" from "+table.name+" where 1=1 and ";
+        result+="from ";
+    }
+
+    @Override
+    public void visit(Where where) {
+        result+="where ";
+    }
+
+    @Override
+    public void visit(UnaryExpression unaryExpression) {
+        result+= "!";
+    }
+
+    @Override
+    public void visit(BinaryExpression binaryExpression) {
+        String op;
+        switch (binaryExpression.op){
+            case EQ: op="="; break;
+            case NE: op="<>"; break;
+            case GE: op=">="; break;
+            case GT: op=">"; break;
+            case LE: op="<="; break;
+            case LT: op="<"; break;
+            case BETWEEN: op="BETWEEN"; break;
+            case LIKE: op="LIKE"; break;
+            default: op="IN"; break;
+        }
+        result+=op+" ";
     }
 
     @Override
@@ -41,21 +67,29 @@ public class SQLVisitor implements Visitor {
             case LIKE: op="LIKE"; break;
             default: op="IN"; break;
         }
-        result+= restriction.attribute+" "+op+" "+restriction.value + " AND ";
+        result+= restriction.attribute+" "+op+" "+restriction.value ;
         //esto esta mal no puede terminar con un
         // AND , lo dejo por ahora, pero falta agregar
         //funcionalidad AND / OR (arbol para consultas complejas (con parentesis y ands y ors)
     }
 
     @Override
+    public void visit(OrderBy order) {
+        result+=" Order By ";
+    }
+
+    @Override
     public void visit(Order order) {
-        result=result.substring(0,result.length()-4);
-        result+="Order By "+order.attribute.name +" "+order.order+" ";
-        // deberia haber una clase order.. como con el and porque si pones mas de un orden esto explootaa
+        result+=order.order+" ";
     }
 
     @Override
     public void visit(Limit limit) {
-        result+="limit "+limit.limit;  // maaal deberia haber una clase limit para escribir el lmit y dps poner todos los limites
+        result+="limit "+limit.from+ " , "+limit.to ;
+    }
+
+    @Override
+    public void visit(Symbol<?> tSymbol) {
+        result+= tSymbol.symbol.toString()+ " ";
     }
 }

@@ -15,14 +15,14 @@ public class QueryBuilder {
 
     private Table table;
     private List<Attribute> attributes;
-    private List<Restriction> restrictions;
+    private List<Expression<?>> restrictions;
     private List<Order> orders;
     private Limit limit;
 
     public QueryBuilder from(String table){
         this.table=new Table(table);
         attributes=new ArrayList<Attribute>();
-        restrictions=new ArrayList<Restriction>();
+        restrictions=new ArrayList<Expression<?>>();
         orders=new ArrayList<Order>();
         return this;
     }
@@ -38,8 +38,9 @@ public class QueryBuilder {
         return this;
     }
 
-    public QueryBuilder with(Restriction... restrictions){
-        this.restrictions= Arrays.asList(restrictions);
+    public QueryBuilder with(Expression<?>... restrictions){
+        //this.restrictions= Arrays.asList(restrictions);
+        this.restrictions=Arrays.asList(restrictions);
         return this;
     }
 

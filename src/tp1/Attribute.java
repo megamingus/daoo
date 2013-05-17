@@ -7,17 +7,43 @@ package tp1;
  * Time: 01:00
  * To change this template use File | Settings | File Templates.
  */
-public class Attribute implements Visitable{
+public class Attribute<T> implements Visitable{
 
-    final String name;
+    final Symbol<String> name;
 
     public Attribute(String name){
-        this.name=name;
+        this.name=new Symbol<String>(name);
     }
 
-    public Restriction eq(String i){  // podria hacer que simplemente sea un Object lo que le pase... pero mejor evitar que pase objetos complicados...
-        return Restriction.eq(name,i); //paso el string name o el att completo?  (this )
+    public BinaryExpression eq(T i){
+        return BinaryExpression.eq(name,new Symbol<T>(i));
     }
+    public BinaryExpression ne(T i){
+        return BinaryExpression.ne(name,new Symbol<T>(i));
+    }
+    public BinaryExpression gt(T i){
+        return BinaryExpression.gt(name,new Symbol<T>(i));
+    }
+    public BinaryExpression lt(T i){
+        return BinaryExpression.lt(name,new Symbol<T>(i));
+    }
+    public BinaryExpression le(T i){
+        return BinaryExpression.le(name,new Symbol<T>(i));
+    }
+    public BinaryExpression ge(T i){
+        return BinaryExpression.ge(name,new Symbol<T>(i));
+    }
+    public BinaryExpression between(T i){
+        return BinaryExpression.between(name,new Symbol<T>(i));
+    }
+    public BinaryExpression like(T i){
+        return BinaryExpression.like(name,new Symbol<T>(i));
+    }
+    public UnaryExpression not(){
+        return UnaryExpression.not(name);
+    }
+
+    /*
     public Restriction ne(String i){
         return Restriction.ne(name,i);
     }
@@ -63,7 +89,7 @@ public class Attribute implements Visitable{
     }
     public Restriction like(int i){
         return Restriction.like(name,i);
-    }
+    }                       */
 
     public Order desc(){
         return Order.desc(this);
@@ -74,6 +100,7 @@ public class Attribute implements Visitable{
 
     @Override
     public void accept(Visitor visitor) {
+        name.accept(visitor);
         visitor.visit(this);
     }
 }

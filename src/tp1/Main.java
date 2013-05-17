@@ -14,7 +14,7 @@ public class Main {
         Query q=new QueryBuilder()
                 .from("people")
                 .get("att","att2")
-                .with(name.eq("Cata"),new Attribute("age").gt(14))
+                .with(name.eq("Cata"), name.ge(45)   )
                 .orderBy(name.desc())
                 .limit(1)
                 .build();
