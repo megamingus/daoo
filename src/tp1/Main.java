@@ -11,10 +11,11 @@ public class Main {
 
     public static void main(String[] args) {
         Attribute name=new Attribute("name");
+        Attribute age=new Attribute("Age");
         Query q=new QueryBuilder()
                 .from("people")
-                .get("att","att2")
-                .with(name.eq("Cata").and(new Attribute("Age").ge(45)).or(name.like("what").and(new Attribute("accepted").not())))
+                .get(name,age)
+                .with(name.eq("Cata").and(age.ge(45)).or(age.between(2,7).and(new Attribute("accepted").not())))
                 .orderBy(name.desc())
                 .limit(1)
                 .build();

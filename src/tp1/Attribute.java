@@ -33,8 +33,8 @@ public class Attribute<T> implements Visitable{
     public BinaryExpression ge(T i){
         return BinaryExpression.ge(name,new Symbol<T>(i));
     }
-    public BinaryExpression between(T i){
-        return BinaryExpression.between(name,new Symbol<T>(i));
+    public BinaryExpression between(T min,T max){
+        return BinaryExpression.gt(name,new Symbol<T>(min)).and(this.lt(max));
     }
     public BinaryExpression like(T i){
         return BinaryExpression.like(name,new Symbol<T>(i));
