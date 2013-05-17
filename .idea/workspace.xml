@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e51f015-66cb-4217-ba0e-81250c75f06b" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\daoo.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\AND.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Attribute.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Expression.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Limit.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Main.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\NullObject.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\OR.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Operation.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\OperationEnum.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Order.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\OrderEnum.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Query.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\QueryBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\QueryBuillder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Restiction.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Restriction.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\SQLVisitor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\SQLVisitor.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Table.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Visitable.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Idea Projects\DAOO\out\production\daoo\tp1\Visitor.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="daoo.iws" />
@@ -45,7 +23,7 @@
     <file path="/Visitor.java" changelist="6e51f015-66cb-4217-ba0e-81250c75f06b" time="1368186902037" ignored="false" />
     <file path="/Limit.java" changelist="6e51f015-66cb-4217-ba0e-81250c75f06b" time="1368186942647" ignored="false" />
     <file path="/OperationEnum.java" changelist="6e51f015-66cb-4217-ba0e-81250c75f06b" time="1368187768842" ignored="false" />
-    <file path="/Dummy.txt" changelist="6e51f015-66cb-4217-ba0e-81250c75f06b" time="1368762491452" ignored="false" />
+    <file path="/Dummy.txt" changelist="6e51f015-66cb-4217-ba0e-81250c75f06b" time="1368762691534" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +141,7 @@
       <file leaf-file-name="Restriction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tp1/Restriction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="1" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.94237286">
+            <state line="50" column="1" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.8694915">
               <folding />
             </state>
           </provider>
@@ -240,6 +218,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,37 +227,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tp1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -296,12 +246,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Order" type="Application" factoryName="Application" temporary="true">
@@ -362,19 +312,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -401,6 +338,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -482,7 +432,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -501,7 +451,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -669,7 +619,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tp1/Restriction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="1" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.94237286">
+        <state line="50" column="1" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.8694915">
           <folding />
         </state>
       </provider>
