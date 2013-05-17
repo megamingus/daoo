@@ -8,7 +8,8 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public class BinaryExpression extends Expression{
-    final Expression<?> left;
+    
+	final Expression<?> left;
     final OperationEnum op;
     final Expression<?> right;
 
@@ -52,9 +53,6 @@ public class BinaryExpression extends Expression{
     public UnaryExpression not(){
         return UnaryExpression.not(this);
     }
-
-
-
 
     @Override
     public void accept(Visitor visitor) {

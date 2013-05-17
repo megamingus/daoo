@@ -8,9 +8,11 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public class Order implements Visitable{
-    final Attribute attribute;
+    
+	final Attribute attribute;
     final OrderEnum order;
-    private Order(Attribute attribute,OrderEnum o){
+    
+    private Order(Attribute attribute, OrderEnum o){
         this.attribute=attribute;
         order=o;
     }

@@ -8,17 +8,18 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public class Limit implements Visitable{
-    final int from;
-    final int to;
+    
+	final int offset;
+    final int numberOfRows;
 
-    Limit(int from, int to){
-        this.from=from;
-        this.to=to;
+    Limit(int offset, int numberOfRows){
+        this.offset=offset;
+        this.numberOfRows=numberOfRows;
     }
 
-    Limit(int to){
-        this.from=0;
-        this.to=to;
+    Limit(int numberOfRows){
+        this.offset=0;
+        this.numberOfRows=numberOfRows;
     }
 
     @Override
@@ -26,4 +27,3 @@ public class Limit implements Visitable{
         visitor.visit(this);
     }
 }
-

@@ -89,7 +89,10 @@ public class SQLVisitor implements Visitor {
 
     @Override
     public void visit(Limit limit) {
-        result+="limit "+limit.from+ " , "+limit.to ;
+        result +="limit ";
+        if(limit.offset != 0)
+        	result += limit.offset + ", ";
+        result += limit.numberOfRows ;
     }
 
     @Override

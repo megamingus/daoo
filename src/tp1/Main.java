@@ -17,7 +17,7 @@ public class Main {
                 .get(name,age)
                 .with(name.eq("Cata").and(age.ge(45)).or(age.between(2,7).and(new Attribute("accepted").not())))
                 .orderBy(name.desc())
-                .limit(1)
+                .limit(1, 2)
                 .build();
         SQLVisitor visitor=new SQLVisitor();
         q.accept(visitor);

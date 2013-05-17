@@ -31,6 +31,7 @@ public class QueryBuilder {
         this.attributes=Arrays.asList(attributes);
         return this;
     }
+    
     public QueryBuilder get(String... attributes){
         for(String attr:attributes){
             this.attributes.add(new Attribute(attr));
@@ -39,7 +40,6 @@ public class QueryBuilder {
     }
 
     public QueryBuilder with(Expression<?>... restrictions){
-        //this.restrictions= Arrays.asList(restrictions);
         this.restrictions=Arrays.asList(restrictions);
         return this;
     }
@@ -49,11 +49,20 @@ public class QueryBuilder {
         return this;
     }
 
-    public QueryBuilder limit(int limit){
-        this.limit=new Limit(limit);
+    public QueryBuilder limit(int numberOfRows){
+    	if(numberOfRows < 0)
+    		throw new NumberFormatException();
+    	this.limit = new Limit(numberOfRows);
         return this;
     }
 
+    public QueryBuilder limit(int offset, int numberOfRows){
+    	if(offset < 0 || numberOfRows < 0)
+    		throw new NumberFormatException();
+    	this.limit = new Limit(offset, numberOfRows);
+    	return this;
+    }
+    
     public Query build(){
         return new Query(table, attributes,restrictions,orders,limit);
     }

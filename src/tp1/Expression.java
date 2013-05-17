@@ -8,6 +8,6 @@ package tp1;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Expression<T> implements Visitable{
-    public abstract void accept(Visitor visitor);
+    
+	public abstract void accept(Visitor visitor);
 }
-
